@@ -1,0 +1,21 @@
+driver:
+  name: terraform
+  root_module_directory: test/fixtures/default
+  command_timeout: 1800
+
+provisioner:
+  name: terraform
+
+verifier:
+  name: terraform
+  groups:
+  - name: default
+  systems:
+  - name: local
+    backend: aws
+
+platforms:
+  - name: terraform
+
+suites:
+  - name: default
