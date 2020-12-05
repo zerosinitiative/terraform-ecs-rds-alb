@@ -19,20 +19,20 @@ module "ecs_cluster" {
   }
 
   region     = "ap-south-1"
-  vpc_id     = "vpc-884c43e0"
-  subnet_ids = ["subnet-2ca70b57","subnet-1da39675","subnet-8947ddc5"]
+  vpc_id     = ""
+  subnet_ids = []
 
   deployment_identifier = "dev"
 
   cluster_name                         = "app"
-  cluster_instance_ssh_public_key_path = "/Users/akshaypk/.ssh/id_rsa.pub"
+  cluster_instance_ssh_public_key_path = ""
   cluster_instance_type                = "t3.small"
 
   cluster_minimum_size     = 0
   cluster_maximum_size     = 0
   cluster_desired_capacity = 0
 
-  password = "password123"
+  password = ""
   db_name  = "student"
 }
 
